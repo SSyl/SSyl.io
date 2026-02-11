@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SSyl - Game modder, tool builder, tinkerer.">
+  <meta property="og:title" content="SSyl">
+  <meta property="og:description" content="Game modder, tool builder, tinkerer.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ssyl.io">
+  <title>SSyl</title>
+  <link rel="icon" type="image/png" href="img/logo-dark.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#top" class="nav-logo"><img src="img/logo-dark.png" alt="SSyl" class="nav-logo-img">SSyl.io</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#links">Links</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <h1 class="hero-name">SSyl</h1>
+      <p class="hero-tagline">I take things apart to see how they work.<br>
+        Sometimes I put them back together better.</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <h2 class="section-heading">About</h2>
+      <div class="about-content">
+        <p>I'm a Canadian-American with a habit of taking things apart to see how they work.</p>
+        <p>I started out in web development and QA, worked as a system administrator managing servers and databases, and have been building PCs since I was a kid. These days I mostly write game mods - digging into game engines, writing tools, and occasionally patching the modding frameworks themselves when something breaks.</p>
+        <p>I also run a homelab and a couple of VPSs. The end result rarely saves time or money, but building the thing is the whole point. I don't really specialize. I just follow whatever's interesting.</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+      <h2 class="section-heading">Projects</h2>
+
+      <!-- Game Modding -->
+      <div class="project-group">
+        <h3 class="group-heading">Game Modding</h3>
+
+        <div class="project-cards">
+
+          <!-- Abiotic Factor -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <h4 class="project-title">Abiotic Factor</h4>
+              <span class="project-status project-status--active">active</span>
+            </div>
+            <p class="project-description">Multiple mods built on the UE4SS scripting framework. The main one, Rebiotic Recalibration, bundles 15+ configurable QoL tweaks, visual enhancements, and bug fixes into a single package - things like ammo counters, distribution pad indicators, teleporter labels, and vehicle headlight toggles. Also maintain several standalone mods and contribute bug reproductions and stability patches back to the UE4SS framework itself.</p>
+            <ul class="project-tech">
+              <li>Lua</li>
+              <li>UE4SS</li>
+              <li>Unreal Engine 5</li>
+            </ul>
+            <ul class="project-card-links">
+              <li><a href="https://github.com/SSyl/ABF-RebioticRecalibration">GitHub</a></li>
+              <li><a href="https://www.nexusmods.com/abioticfactor/mods/180">Nexus Mods</a></li>
+            </ul>
+          </div>
+
+          <!-- Skyrim SE -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <h4 class="project-title">Skyrim Special Edition</h4>
+              <span class="project-status project-status--maintained">maintained</span>
+            </div>
+            <p class="project-description">Armor Rating Redux SE - an SKSE64 DLL plugin that replaces Skyrim's armor rating system with a Morrowind-inspired formula. Removes the vanilla armor cap and provides better scaling at all levels. I took over as maintainer, porting it to Special Edition and keeping it updated.</p>
+            <ul class="project-tech">
+              <li>C++</li>
+              <li>Papyrus</li>
+              <li>SKSE64</li>
+            </ul>
+            <ul class="project-card-links">
+              <li><a href="https://github.com/SSyl/Skyrim-Armor-Rating-Redux-SE">GitHub</a></li>
+              <li><a href="https://www.nexusmods.com/skyrimspecialedition/mods/17932">Nexus Mods</a></li>
+            </ul>
+          </div>
+
+          <!-- Oblivion Remastered -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <h4 class="project-title">Oblivion Remastered</h4>
+            </div>
+            <p class="project-description">Defogger lets you customize fog density separately for outdoors, interiors, caves, and Oblivion realms. Also published an optimized WindowsEngine.ini with tuned settings for better performance without sacrificing visual quality.</p>
+            <ul class="project-tech">
+              <li>Lua</li>
+              <li>UE4SS</li>
+              <li>INI Tweaks</li>
+            </ul>
+            <ul class="project-card-links">
+              <li><a href="https://github.com/SSyl/Defogger---Oblivion-Remastered">GitHub</a></li>
+              <li><a href="https://www.nexusmods.com/oblivionremastered/mods/3645">Nexus Mods</a></li>
+            </ul>
+          </div>
+
+          <!-- Valheim -->
+          <div class="project-card project-card--compact">
+            <div class="project-card-header">
+              <h4 class="project-title">Valheim</h4>
+              <span class="project-year">2021</span>
+            </div>
+            <p class="project-description">4 mods: Whetstone, FishFood, ToastyTorches, CustomDoF</p>
+            <ul class="project-tech">
+              <li>C#</li>
+              <li>BepInEx</li>
+            </ul>
+            <ul class="project-card-links">
+              <li><a href="https://github.com/SSyl?tab=repositories&q=valheim">GitHub</a></li>
+            </ul>
+          </div>
+
+          <!-- 7 Days to Die -->
+          <div class="project-card project-card--compact">
+            <div class="project-card-header">
+              <h4 class="project-title">7 Days to Die</h4>
+              <span class="project-year">2020</span>
+            </div>
+            <p class="project-description">6 mods: Meaningful Death, Weapon Balance, Better Horns, Amplified Magnum, Helmet Lights, Toolbelt Patch</p>
+            <ul class="project-tech">
+              <li>XML</li>
+            </ul>
+            <ul class="project-card-links">
+              <li><a href="https://github.com/SSyl?tab=repositories&q=7d2d">GitHub</a></li>
+            </ul>
+          </div>
+
+          <!-- Don't Starve Together -->
+          <div class="project-card project-card--compact">
+            <div class="project-card-header">
+              <h4 class="project-title">Don't Starve Together</h4>
+              <span class="project-year">2016</span>
+            </div>
+            <p class="project-description">3 mods: Beefalo Horns Without Harm, Unburnable Beefalo, Willow's Infinite Lighter</p>
+            <ul class="project-tech">
+              <li>Lua</li>
+            </ul>
+            <ul class="project-card-links">
+              <li><a href="https://github.com/SSyl?tab=repositories&q=dst">GitHub</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tools & Utilities -->
+      <div class="project-group">
+        <h3 class="group-heading">Tools &amp; Utilities</h3>
+
+        <div class="project-cards">
+
+          <div class="project-card">
+            <div class="project-card-header">
+              <h4 class="project-title">Rainmeter HWiNFO Skin</h4>
+            </div>
+            <p class="project-description">Custom Rainmeter skin that pulls real-time CPU, GPU, RAM, and network data from HWiNFO sensors. Frosted-glass UI designed to sit on the desktop without getting in the way.</p>
+            <ul class="project-tech">
+              <li>Rainmeter</li>
+              <li>HWiNFO</li>
+            </ul>
+            <ul class="project-card-links">
+              <li><a href="https://github.com/SSyl/Rainmeter-SSyl-HWiNFO">GitHub</a></li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-header">
+              <h4 class="project-title">UESP Wiki Redirector</h4>
+              <span class="project-status project-status--fork">fork</span>
+            </div>
+            <p class="project-description">Browser extension that automatically redirects Elder Scrolls Fandom/Wikia links to the Unofficial Elder Scrolls Pages (UESP) - the community-preferred wiki with better information and fewer ads.</p>
+            <ul class="project-tech">
+              <li>JavaScript</li>
+              <li>Browser Extension</li>
+            </ul>
+            <ul class="project-card-links">
+              <li><a href="https://github.com/SSyl/UESPWikiRedirector">GitHub</a></li>
+            </ul>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-header">
+              <h4 class="project-title">Brogrammer Theme</h4>
+              <span class="project-status project-status--fork">fork</span>
+            </div>
+            <p class="project-description">Fork of the Brogrammer color scheme, a flat dark theme. Ported and maintained for Sublime Text 4 and VS Code.</p>
+            <ul class="project-tech">
+              <li>Sublime Text</li>
+              <li>VS Code</li>
+            </ul>
+            <ul class="project-card-links">
+              <li><a href="https://github.com/SSyl/brogrammer-theme-ST4">Sublime Text</a></li>
+              <li><a href="https://github.com/SSyl/vscode-brogrammer-theme">VS Code</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- LINKS -->
+    <section class="links" id="links">
+      <h2 class="section-heading">Links</h2>
+      <ul class="link-list">
+        <li><a href="https://github.com/SSyl">GitHub</a></li>
+        <li><a href="https://www.nexusmods.com/profile/SSyl/mods">Nexus Mods</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 SSyl</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
