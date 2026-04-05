@@ -211,7 +211,24 @@ section {
 .interests-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
+}
+
+.interest-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.interests-list:hover .interest-item {
+  opacity: 0.5;
+}
+
+.interests-list .interest-item:hover {
+  opacity: 1;
+  border-color: var(--accent);
 }
 
 .interest-item dt {
