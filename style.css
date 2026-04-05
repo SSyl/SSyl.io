@@ -5,14 +5,11 @@
 :root {
   --bg-primary: #242424;
   --bg-surface: #2e2e2e;
-  --bg-surface-hover: #363636;
   --border: #444444;
   --text-primary: #f0f0f0;
   --text-secondary: #a0a0a0;
   --text-muted: #6a6a6a;
   --accent: #4BD882;
-  --accent-dim: rgba(46, 160, 67, 0.2);
-  --status-neutral-bg: rgba(136, 153, 166, 0.2);
 
   --font-mono: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -197,7 +194,6 @@ section {
    =========================== */
 
 .about-content {
-  /* max-width: 42rem; */
 }
 
 .about-content p {
@@ -209,148 +205,26 @@ section {
 }
 
 /* ===========================
-   Project Groups
+   Interests
    =========================== */
 
-.project-group {
-  margin-bottom: 3rem;
-}
-
-.project-group:last-child {
-  margin-bottom: 0;
-}
-
-.group-heading {
-  font-family: var(--font-mono);
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  margin-bottom: 1.25rem;
-}
-
-/* ===========================
-   Project Cards
-   =========================== */
-
-.project-cards {
+.interests-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1.5rem;
 }
 
-.project-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 1.25rem 1.5rem;
-  transition: border-color 0.15s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card:hover {
-  border-color: var(--accent);
-}
-
-.project-card-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.project-title {
+.interest-item dt {
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-primary);
+  margin-bottom: 0.25rem;
 }
 
-.project-description {
+.interest-item dd {
   font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  flex-grow: 1;
-}
-
-.project-description strong {
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-/* Status badges */
-
-.project-status {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  padding: 0.15em 0.5em;
-  border-radius: 3px;
-  text-transform: lowercase;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.project-status--active {
-  color: var(--accent);
-  background: var(--accent-dim);
-}
-
-.project-status--maintained,
-.project-status--fork {
-  color: var(--text-primary);
-  background: var(--status-neutral-bg);
-}
-
-.project-year {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  flex-shrink: 0;
-}
-
-/* Tech tags */
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.75rem;
-}
-
-.project-tech li {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-secondary);
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 0.15em 0.5em;
-}
-
-/* Card links */
-
-.project-card-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.project-card-links a {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-}
-
-/* Compact variant */
-
-.project-card--compact {
-  padding: 1rem 1.25rem;
-}
-
-.project-card--compact .project-title {
-  font-size: 0.95rem;
-}
-
-.project-card--compact .project-description {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 /* ===========================
@@ -396,16 +270,16 @@ section {
     padding: 3rem 0;
   }
 
-  .project-cards {
-    grid-template-columns: 1fr;
-  }
-
   .nav-links {
     gap: 1rem;
   }
 
   .nav-links a {
     font-size: 0.8rem;
+  }
+
+  .interests-list {
+    grid-template-columns: 1fr;
   }
 
   .link-list {
