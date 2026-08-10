@@ -417,16 +417,11 @@ section + section { border-top: 1px solid var(--border); }
   gap: 0.5rem;
 }
 
-.link-list a::after {
-  content: '\2197';
-  font-size: 0.8em;
-  color: var(--text-muted);
-  transition: transform 0.15s ease, color 0.15s ease;
-}
-
-.link-list a:hover::after {
-  color: var(--accent);
-  transform: translate(2px, -2px);
+.link-icon {
+  width: 1.05em;
+  height: 1.05em;
+  fill: currentColor;
+  flex: none;
 }
 
 /* ===========================
