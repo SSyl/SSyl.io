@@ -213,6 +213,132 @@ section + section { border-top: 1px solid var(--border); }
 .about-content p + p { margin-top: 1.125rem; }
 
 /* ===========================
+   Work
+   =========================== */
+
+.work-feature {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-surface);
+  margin-bottom: 2.5rem;
+}
+
+.work-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--border);
+}
+
+.work-body { padding: 1.5rem; }
+
+.work-title {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.work-game {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.15em 0.6em;
+  margin-left: 0.5rem;
+  vertical-align: 0.15em;
+  white-space: nowrap;
+}
+
+.work-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+.work-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  margin-top: 0.625rem;
+}
+
+.work-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 0.875rem;
+}
+
+.work-links a {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+.work-links a::after {
+  content: '\2197';
+  margin-left: 0.35em;
+  font-size: 0.85em;
+  color: var(--text-muted);
+  transition: transform 0.15s ease, color 0.15s ease;
+  display: inline-block;
+}
+
+.work-links a:hover::after {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+.work-subhead {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 2.5rem 0 1rem;
+}
+
+.work-desc code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+.work-list {
+  display: grid;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.work-item {
+  background: var(--bg-surface);
+  padding: 1.375rem 1.5rem;
+  box-shadow: inset 2px 0 0 transparent;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-item:hover {
+  background: var(--bg-raised);
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+
+/* ===========================
    Interests
    =========================== */
 

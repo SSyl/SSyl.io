@@ -24,6 +24,7 @@
       <a href="#top" class="nav-logo"><img src="img/logo-dark-128.png" alt="SSyl" class="nav-logo-img">SSyl.io</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#interests">Interests</a></li>
         <li><a href="#links">Links</a></li>
       </ul>
@@ -48,9 +49,101 @@
       </div>
     </section>
 
+    <!-- WORK -->
+    <section class="work" id="work">
+      <h2 class="section-heading"><span class="section-index" aria-hidden="true">02</span>Work</h2>
+
+      <article class="work-feature">
+        <img class="work-shot" src="img/palworld-server-launcher.png"
+             alt="Palworld Server Launcher main window, showing restart, backup and update settings alongside a live server log"
+             width="986" height="649" loading="lazy" decoding="async">
+        <div class="work-body">
+          <h3 class="work-title">Palworld Server Launcher</h3>
+          <p class="work-desc">A Windows app that runs a Palworld dedicated server. It installs the server, keeps it updated, runs scheduled restarts and backups, and restarts it when it crashes or stops responding. Discord control, a full settings editor, and health monitoring.</p>
+          <p class="work-meta">C# / WPF &middot; single .exe &middot; 10 languages</p>
+          <p class="work-links">
+            <a href="https://github.com/SSyl/PalworldServerLauncher/releases/latest">Download</a>
+            <a href="https://github.com/SSyl/PalworldServerLauncher">Source</a>
+          </p>
+        </div>
+      </article>
+
+      <h3 class="work-subhead">Mods</h3>
+      <ul class="work-list">
+        <li class="work-item">
+          <h4 class="work-title">True Mercy <span class="work-game">Palworld</span></h4>
+          <p class="work-desc">Stops burn and poison from killing a pal that Mercy is keeping alive for capture. Your 10,000 damage fireball can't kill it, then a 1 damage burn tick does.</p>
+          <p class="work-meta">13,000+ downloads &middot; 200+ ratings</p>
+          <p class="work-links">
+            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3773035536">Steam Workshop</a>
+            <a href="https://www.nexusmods.com/palworld/mods/4482">Nexus</a>
+            <a href="https://github.com/SSyl/Palworld-TrueMercy">Source</a>
+          </p>
+        </li>
+
+        <li class="work-item">
+          <h4 class="work-title">Ammo Counter <span class="work-game">Abiotic Factor</span></h4>
+          <p class="work-desc">Replaces the HUD's magazine capacity with the ammo you actually have in your inventory, colour-coded by how much is left. Now bundled into Rebiotic Recalibration.</p>
+          <p class="work-meta">5,500+ downloads &middot; 79 endorsements</p>
+          <p class="work-links">
+            <a href="https://www.nexusmods.com/abioticfactor/mods/169">Nexus</a>
+            <a href="https://github.com/SSyl/AbioticFactor-AmmoCounter">Source</a>
+          </p>
+        </li>
+
+        <li class="work-item">
+          <h4 class="work-title">Rebiotic Recalibration <span class="work-game">Abiotic Factor</span></h4>
+          <p class="work-desc">A quality-of-life collection built on UE4SS. 15+ features, tweaks and bug fixes, each independently configurable.</p>
+          <p class="work-meta">3,300+ downloads &middot; 60 endorsements</p>
+          <p class="work-links">
+            <a href="https://www.nexusmods.com/abioticfactor/mods/180">Nexus</a>
+            <a href="https://github.com/SSyl/ABF-RebioticRecalibration">Source</a>
+          </p>
+        </li>
+
+        <li class="work-item">
+          <h4 class="work-title">Steam On-Screen Keyboard <span class="work-game">Abiotic Factor</span></h4>
+          <p class="work-desc">Opens Steam's floating keyboard when a text field takes controller focus, and works around the gamepad softlock that follows dismissing it. C++ against UE4SS.</p>
+          <p class="work-links">
+            <a href="https://www.nexusmods.com/abioticfactor/mods/192">Nexus</a>
+            <a href="https://github.com/SSyl/AbioticFactor-SteamOnScreenKeyboard">Source</a>
+          </p>
+        </li>
+
+        <li class="work-item">
+          <h4 class="work-title">Summon the Moving Box <span class="work-game">Abiotic Factor</span></h4>
+          <p class="work-desc">Boxy on demand, with storage expansion that survives a save reload, movement and gathering speed options, and a summon that can go wrong.</p>
+          <p class="work-links">
+            <a href="https://www.nexusmods.com/abioticfactor/mods/191">Nexus</a>
+            <a href="https://github.com/SSyl/AbioticFactor-SummonTheMovingBox">Source</a>
+          </p>
+        </li>
+      </ul>
+
+      <h3 class="work-subhead">Bug reports &amp; repros</h3>
+      <ul class="work-list">
+        <li class="work-item">
+          <h4 class="work-title">Overlapping ExecuteInGameThread callbacks <span class="work-game">UE4SS</span></h4>
+          <p class="work-desc">Nested callbacks crash <code>process_simple_actions</code> in UE4SS 3.0.1-932. Reported upstream with a minimal reproduction mod; still open and 82 comments deep.</p>
+          <p class="work-links">
+            <a href="https://github.com/UE4SS-RE/RE-UE4SS/issues/1180">Issue #1180</a>
+            <a href="https://github.com/SSyl/UE4SS-EngineTickReentryBug">Repro</a>
+          </p>
+        </li>
+
+        <li class="work-item">
+          <h4 class="work-title">LoadMap hooks fire for one mod only <span class="work-game">UE4SS</span></h4>
+          <p class="work-desc"><code>RegisterLoadMapPreHook</code> and <code>RegisterLoadMapPostHook</code> only fire for whichever mod registers first. Ten test mods isolate it, showing <code>InitGameState</code> hooks firing correctly for all ten while LoadMap fires for one.</p>
+          <p class="work-links">
+            <a href="https://github.com/SSyl/AbioticFactor-UE4SS-LoadMapHook-Bug">Repro</a>
+          </p>
+        </li>
+      </ul>
+    </section>
+
     <!-- THINGS I DO -->
     <section class="interests" id="interests">
-      <h2 class="section-heading"><span class="section-index" aria-hidden="true">02</span>Things I Do</h2>
+      <h2 class="section-heading"><span class="section-index" aria-hidden="true">03</span>Things I Do</h2>
       <dl class="interests-list">
         <div class="interest-item">
           <dt>Game Modding</dt>
@@ -93,7 +186,7 @@
 
     <!-- LINKS -->
     <section class="links" id="links">
-      <h2 class="section-heading"><span class="section-index" aria-hidden="true">03</span>Links</h2>
+      <h2 class="section-heading"><span class="section-index" aria-hidden="true">04</span>Links</h2>
       <ul class="link-list">
         <li><a href="https://github.com/SSyl">GitHub</a></li>
         <li><a href="https://www.nexusmods.com/profile/SSyl/mods">Nexus Mods</a></li>
