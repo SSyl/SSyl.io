@@ -257,23 +257,24 @@ section + section { border-top: 1px solid var(--border); }
   white-space: nowrap;
 }
 
-.work-more {
-  font-size: 0.9375rem;
+.work-tail {
+  background: var(--bg-surface);
+  padding: 1.125rem 1.5rem;
+  font-size: 0.875rem;
   line-height: 1.6;
-  max-width: 62ch;
-  margin-top: 1.25rem;
   color: var(--text-muted);
 }
 
-.work-more strong {
+.work-tail strong {
   font-weight: 500;
   color: var(--text-secondary);
 }
 
-.work-more a {
+.work-tail a {
   font-family: var(--font-mono);
   font-size: 0.8125rem;
   white-space: nowrap;
+  margin-left: 0.35rem;
 }
 
 .work-desc {
