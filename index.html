@@ -124,8 +124,16 @@
         <li class="work-tail">27 mods on Nexus, <strong>27,578 unique downloads</strong> between them. <a href="https://www.nexusmods.com/profile/SSyl/mods">Full list</a></li>
       </ul>
 
-      <h3 class="work-subhead">Bug reports &amp; repros</h3>
+      <h3 class="work-subhead">Modding internals</h3>
       <ul class="work-list">
+        <li class="work-item">
+          <h4 class="work-title">Console Restore <span class="work-game">Palworld</span></h4>
+          <p class="work-desc">Palworld ships with <code>ALLOW_CONSOLE</code> on, so the engine builds a console at startup and registers it with <code>GLog</code>. Only the toggle is disabled, with console keys eaten above <code>UConsole::InputKey</code>. A working proof of concept, plus a writeup of how that was traced.</p>
+          <p class="work-links">
+            <a href="https://github.com/SSyl/Pal-ConsoleRestore">Writeup &amp; source</a>
+          </p>
+        </li>
+
         <li class="work-item">
           <h4 class="work-title">Overlapping ExecuteInGameThread callbacks <span class="work-game">UE4SS</span></h4>
           <p class="work-desc">Nested callbacks crash <code>process_simple_actions</code> in UE4SS 3.0.1-932. Reported upstream with a minimal reproduction mod; still open and 82 comments deep.</p>
