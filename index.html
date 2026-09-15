@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SSyl - tinkerer, modder, sysadmin. I take things apart to see how they work.">
-  <meta property="og:title" content="SSyl">
-  <meta property="og:description" content="Tinkerer, modder, sysadmin. I take things apart to see how they work.">
+  <meta name="description" content="Syl S. - sysadmin and developer. Windows and Linux administration, automation, and open source projects.">
+  <meta property="og:title" content="Syl S.">
+  <meta property="og:description" content="Sysadmin and developer. Windows and Linux administration, automation, and open source projects.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ssyl.io">
   <meta property="og:image" content="https://ssyl.io/img/logo-dark-512.png">
-  <title>SSyl</title>
+  <title>Syl S.</title>
   <link rel="icon" type="image/png" href="img/logo-dark-128.png">
   <link rel="apple-touch-icon" href="img/logo-dark-512.png">
   <link rel="stylesheet" href="style.css">
@@ -43,10 +43,9 @@
     <section class="about" id="about">
       <h2 class="section-heading"><span class="section-index" aria-hidden="true">01</span>About</h2>
       <div class="about-content">
-        <p>I'm a Canadian-American with a habit of taking things apart to see how they work. I've been at it since I was sneaking Doom onto my grandparents' DOS machine they used for accounting. They didn't know. It ran great.</p>
-        <p>Professionally (if you can call me that), I started out in web development and QA, worked as a system administrator managing servers and databases, and have been building PCs since I was a kid. These days I mostly write game mods - digging into game engines, writing tools, and occasionally patching the modding frameworks themselves when something breaks.</p>
-        <p>I mod whatever I'm playing at the time, so the list jumps around a lot and some of the most endorsed things I've released are ones I've long since moved on from. It's all open source, which seems only fair given how much time I spend reading other people's code.</p>
-        <p>I also run a homelab and a couple of VPSs. I tell myself it's to save money, but usually it costs more in time spent and often in dollars too, but where's the fun if you don't make it your own at least a little bit? Jack of all trades, master of null (or nil?).</p>
+        <p>Professionally, I started out in web development and QA, worked as a system administrator managing servers and databases, and have been building PCs since I was a kid. These days I do IT work, and when I'm not, I mod whatever game I'm playing, which means digging into game engines, writing tools, and occasionally patching the modding frameworks themselves when something breaks.</p>
+        <p>The mod list jumps around a lot as a result, and some of the most endorsed things I've released are ones I've long since moved on from. It's all open source, which seems only fair given how much time I spend reading other people's code.</p>
+        <p>I also run a homelab and a couple of VPSs. I tell myself it's to save money, but usually it costs more in time spent and often in dollars too, but where's the fun if you don't make it your own at least a little bit?</p>
       </div>
     </section>
 
@@ -74,7 +73,7 @@
         <li class="work-item">
           <h4 class="work-title">True Mercy <span class="work-game">Palworld</span></h4>
           <p class="work-desc">Stops burn and poison from killing a pal that Mercy is keeping alive for capture. Your 10,000 damage fireball can't kill it, then a 1 damage burn tick does.</p>
-          <p class="work-meta">13,000+ Steam Workshop downloads &middot; 200+ ratings</p>
+          <p class="work-meta">35,000+ Steam Workshop subscribers &middot; 99% positive from 476 ratings</p>
           <p class="work-links">
             <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3773035536">Steam Workshop</a>
             <a href="https://www.nexusmods.com/palworld/mods/4482">Nexus</a>
@@ -122,7 +121,7 @@
           </p>
         </li>
 
-        <li class="work-tail">27 mods on Nexus, <strong>27,578 unique downloads</strong> between them. <a href="https://www.nexusmods.com/profile/SSyl/mods">Full list</a></li>
+        <li class="work-tail">Verified Mod Author on Nexus &middot; 27 mods, <strong>30,958 downloads</strong> between them. <a href="https://www.nexusmods.com/profile/SSyl/mods">Full list</a></li>
       </ul>
 
       <h3 class="work-subhead">Modding internals</h3>
@@ -145,10 +144,11 @@
         </li>
 
         <li class="work-item">
-          <h4 class="work-title">LoadMap hooks fire for one mod only <span class="work-game">UE4SS</span></h4>
-          <p class="work-desc"><code>RegisterLoadMapPreHook</code> and <code>RegisterLoadMapPostHook</code> only fire for whichever mod registers first. Ten test mods isolate it, showing <code>InitGameState</code> hooks firing correctly for all ten while LoadMap fires for one.</p>
+          <h4 class="work-title">Bitfield accessors throw on raw-offset configs <span class="work-game">UE4SS</span></h4>
+          <p class="work-desc">A <code>MemberVariableLayout.ini</code> line that gives a bitfield a raw offset loads the offset but never registers the bit, so the generated accessor throws. Traced to a UVTD guard that skips <code>BitfieldInfos</code> when <code>MemberOffsets</code> is already filled. 12 shipped configs are in that state.</p>
           <p class="work-links">
-            <a href="https://github.com/SSyl/AbioticFactor-UE4SS-LoadMapHook-Bug">Repro</a>
+            <a href="https://github.com/UE4SS-RE/RE-UE4SS/issues/1419">Issue #1419</a>
+            <a href="https://github.com/SSyl/UE4SS-bitfield-bug">Repro</a>
           </p>
         </li>
       </ul>
@@ -160,7 +160,7 @@
       <dl class="interests-list">
         <div class="interest-item">
           <dt>Game Modding</dt>
-          <dd>Lua, C++, C# across UE4SS, SKSE, BepInEx - mostly survival and RPG games. Sometimes patching the frameworks themselves.</dd>
+          <dd>Lua, C++, C# across UE4SS, SKSE, BepInEx. Mostly survival and RPG games, and sometimes patching the frameworks themselves.</dd>
         </div>
         <div class="interest-item">
           <dt>Reverse Engineering</dt>
