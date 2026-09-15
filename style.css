@@ -206,10 +206,6 @@ section + section { border-top: 1px solid var(--border); }
    About
    =========================== */
 
-.about-content {
-  max-width: 64ch;
-}
-
 .about-content p + p { margin-top: 1.125rem; }
 
 /* ===========================
